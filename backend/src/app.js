@@ -8,6 +8,7 @@ class App {
     this.middlewares();
     this.routes();
   }
+
   middlewares() {
     // preparando pra receber requisições via json
     this.server.use(express.json());

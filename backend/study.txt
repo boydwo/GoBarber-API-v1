@@ -9,3 +9,6 @@
         -Receita de uma imagem
       - coker + postgress
         - docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+        -Sequalize
+          -ORM 
