@@ -4,7 +4,7 @@
   - Docker:
       -Imagem: São tecnologias que a gente pode colocar dentro de containers
       -Container: Instancia de uma imagem
-      -Docker Registry
+      -Docker Registry =
       -Dockerfile
         -Receita de uma imagem
       - coker + postgress
