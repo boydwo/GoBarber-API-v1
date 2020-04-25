@@ -18,3 +18,5 @@
               -yarn sequelize db:migrate
             -desfazer migration:
               -yarn sequelize db:migrate:undo
+            hash na senha:
+              -yarn add bcryptjs
