@@ -21,5 +21,8 @@
             hash na senha:
               -yarn add bcryptjs
             JWT:
-            yarn add jsonwebtoken
+              -yarn add jsonwebtoken
+            YUp
+             -yanr add yup
+
 
