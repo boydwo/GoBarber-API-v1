@@ -20,3 +20,6 @@
               -yarn sequelize db:migrate:undo
             hash na senha:
               -yarn add bcryptjs
+            JWT:
+            yarn add jsonwebtoken
+
