@@ -22,7 +22,9 @@
               -yarn add bcryptjs
             JWT:
               -yarn add jsonwebtoken
-            YUp
+            YUp:
              -yanr add yup
+            Multer:
+              -yarn add multer
 
 
