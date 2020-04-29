@@ -52,7 +52,7 @@ class UserController {
     const user = await User.findByPk(req.userId);
 
     // verifica para troca de email
-    if (email && email !== user.email) {
+    if (email !== user.email) {
       // verifica se email existe
       const userExists = await User.findOne({
         where: { email },
