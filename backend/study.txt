@@ -25,6 +25,6 @@
             YUp:
              -yanr add yup
             Multer:
-              -yarn add multer
+              -yarn add multer s
 
 
