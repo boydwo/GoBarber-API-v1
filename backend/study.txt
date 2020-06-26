@@ -29,5 +29,12 @@
             date-fns:
               bbt para le dar com dates
               -yarn add date-fns@next
+            nodemailer
+              -yarn add nodemailer
+              servidores emai:
+                Amazon  SESm
+                Mailgun
+                sparkPost
+                Mandril(Mailchimp)
 
 

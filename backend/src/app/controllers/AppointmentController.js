@@ -1,10 +1,12 @@
 import * as Yup from 'yup';
-import { startOfHour, parseISO, isBefore, format } from 'date-fns';
+import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import User from '../models/User';
 import File from '../models/File';
 import Appointment from '../models/Appointment';
 import Notification from '../schemas/Notification';
+
+import Mail from '../../lib/Mail';
 
 class AppointmentController {
   async index(req, res) {
@@ -112,6 +114,42 @@ class AppointmentController {
     });
 
     return res.json(appointment2);
+  }
+
+  async delete(req, res) {
+    const appoitment = await Appointment.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          as: 'provider',
+          attributes: ['name', 'email'],
+        },
+      ],
+    });
+    if (appoitment.userId !== req.userId) {
+      return res.status(401).json({
+        error: "You don't have permission to cancel this appoitntment",
+      });
+    }
+
+    // -2 horas
+    const dateWithSub = subHours(appoitment.date, 2);
+
+    if (isBefore(dateWithSub, new Date())) {
+      return res.status(401).json({
+        error: 'You can only cancel appoitments 2 hour in advance',
+      });
+    }
+    appoitment.canceled_at = new Date();
+    await appoitment.save();
+
+    await Mail.SendMail({
+      to: `${appoitment.provider.name} <${appoitment.provider.email}>`,
+      subject: 'Agendamento Cancelado',
+      text: 'Você tem um novo cancelamento',
+    });
+
+    return res.json();
   }
 }
 export default new AppointmentController();
