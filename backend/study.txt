@@ -36,5 +36,7 @@
                 Mailgun
                 sparkPost
                 Mandril(Mailchimp)
+                 ---- template handlebars
+                   - yarn add express-handlebars nodemailer-express-handlebars
 
 

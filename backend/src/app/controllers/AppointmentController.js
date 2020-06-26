@@ -124,6 +124,11 @@ class AppointmentController {
           as: 'provider',
           attributes: ['name', 'email'],
         },
+        {
+          model: User,
+          as: 'user',
+          attributes: ['name'],
+        },
       ],
     });
     if (appoitment.userId !== req.userId) {
@@ -143,10 +148,21 @@ class AppointmentController {
     appoitment.canceled_at = new Date();
     await appoitment.save();
 
+    const formattedDate = format(
+      appoitment.date,
+      "'dia' dd 'de' MMMM', às' H:mm'h'",
+      { locale: pt }
+    );
+
     await Mail.SendMail({
       to: `${appoitment.provider.name} <${appoitment.provider.email}>`,
       subject: 'Agendamento Cancelado',
-      text: 'Você tem um novo cancelamento',
+      template: 'cancellation',
+      context: {
+        provider: appoitment.provider.name,
+        user: appoitment.user.name,
+        date: formattedDate,
+      },
     });
 
     return res.json();
