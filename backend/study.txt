@@ -42,3 +42,9 @@
                    - yarn add express-handlebars nodemailer-express-handlebars
                 Performace de fila/ background jobs
                   -yarn add bee-queue
+                sentry.io
+                  - yarn add @sentry/node@5.19.2
+
+                 yarn add express-async-errors
+
+                 yarn add youch // mensagem de erro
