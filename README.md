@@ -35,12 +35,9 @@ This project was developed at the [RocketSeat GoStack Bootcamp](https://rocketse
 -  [DotEnv](https://www.npmjs.com/package/dotenv)
 -  [VS Code][vc] with [ESLint][vceslint]
 
-## :memo: License
-This project is under the MIT license. See the [LICENSE](https://github.com/lukemorales/gobarber-api/blob/master/LICENSE) for more information.
 
 ---
-
-Feito por Marcos Túlio Rodrigues : wave : [ Entre em contato! ] (https://www.linkedin.com/in/boydwo/)
+Made with por Marcos Túlio Rodrigues :bowtie:  [Get in touch!](https://www.linkedin.com/in/boydwo/)
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
