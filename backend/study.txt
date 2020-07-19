@@ -48,3 +48,7 @@
                  yarn add express-async-errors
 
                  yarn add youch // mensagem de erro
+
+                 yarn add dotenv
+
+                 yarn add cors
