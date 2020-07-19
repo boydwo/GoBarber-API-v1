@@ -39,8 +39,7 @@ This project was developed at the [RocketSeat GoStack Bootcamp](https://rocketse
 This project is under the MIT license. See the [LICENSE](https://github.com/lukemorales/gobarber-api/blob/master/LICENSE) for more information.
 
 ---
-
-Feito por Marcos Túlio Rodrigues : wave : [ Entre em contato! ] (https://www.linkedin.com/in/boydwo/)
+Made with por Marcos Túlio Rodrigues  [Get in touch!](https://www.linkedin.com/in/boydwo/)
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
