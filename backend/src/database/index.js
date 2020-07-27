@@ -26,10 +26,10 @@ class Database {
   }
 
   mongo() {
-    this.mongoConection = mongoose.connect(
-      process.env.MONGO_URL,
-      { useNewUrlParser: true, useFindAndModify: true }
-    );
+    this.mongoConection = mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+      useFindAndModify: true,
+    });
   }
 }
 
